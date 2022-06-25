@@ -1,0 +1,136 @@
+https://e-training.ivorytraining.com/
+exahost
+mahmoud.alsaleh@ivorytraining.com
+Password: DFjfn%rs#4
+To login, visit https://my.exahost.com/
+ 
+
+Username: developer.php@ivorytraining.com
+Password: develop2021
+دى معلومات دخول البيتريكس
+
+https://www.bluehost.com/
+userName: ivory.training
+password:Le@der$2014$1982
+ ssh -p 2222 ivorytr1@ivorytraining.com
+بيانات الهوست
+
+
+http://46.151.214.72:2083/
+training
+6xsuFnTb9ZN27fQH
+
+sup domain
+https://demo.ivorytraining.com/
+
+account for admain
+hhhh2020@gmail.com
+Ad2022
+
+student
+hhhh2022@gmail.com
+St2022
+
+ham2020@gmail.com
+123456
+
+
+https://adaa.atlassian.net/jira/your-work
+
+gitlap
+https://gitlab.com/-/invites/zb25NCSPwrZF_YHxx1vB?invite_type=initial_email
+https://gitlab.com/ivory3/adaa
+
+blue ost
+https://login.bluehost.com/hosting/webmail?_ga=2.42733925.1377739536.1655520671-992632226.1655041084
+
+
+git commit -m "ADAA-8 <message>"
+https://gitlab.com/ivory3/adaa/-/merge_requests
+git checkout -b ADAA-36-design-slider
+work
+git push origin ADAA-34-design-teacher  
+merge request
+
+
+
+
+
+
+
+
+
+
+<div class="col-12  text-left form-group">
+                            <button type="submit" class="btn" style="font-size:24px;background-color:#bbbec1;color:#0FA480"> <i class='fas fa-save' title="{{trans('strings.backend.general.app_update')}}"></i></button>
+                        </div>
+
+
+ <a href="{{ route('admin.teachers.index') }}"
+                    class="btn btn-secondary"  style="color:#0FA480"><i class="fas fa-arrow-left" title="@lang('labels.backend.teachers.view')"></i></a>
+<a href="{{ route('admin.pages.create') }}" class="btn btn-secondary" style="color:green"><i
+                        class="fas fa-plus" title="@lang('strings.backend.general.app_add_new')"></i></a>
+
+
+<a href="{{route('admin.forums-category.edit',['id'=>$item->id]) }}"
+                                            class="btn  btn-secondary mb-1" title="Edit" style="color:blue;"><i
+                                                class="fas fa-pencil-alt  "></i></a>
+
+
+ <a data-method="delete" data-trans-button-cancel="Cancel"
+                                                data-trans-button-confirm="Delete" data-trans-title="Are you sure?"
+                                                class="btn btn-xs btn-secondary  mb-1" style="cursor:pointer;color:red"
+                                                onclick="$(this).find('form').submit();">
+                                                <i class="fas fa-trash"style="color:red" data-toggle="tooltip"
+                                                    data-placement="top" title="" data-original-title="Delete"></i>
+
+                                                <form
+                                                    action="{{route('admin.sliders.destroy',['id'=>$item->id])}}"
+                                                    method="POST" name="delete_item" style="display:none">
+                                                    @csrf
+                                                    {{ method_field('DELETE') }}
+                                                </form>
+                                            </a>
+
+
+<a href="{{ route('admin.coupons.show', ['id' => $item->id]) }}"
+                                                    class="btn  btn-secondary mb-1" title="show" style="color:#0FA480;"><i class="fas fa-eye"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a data-method="delete" data-trans-button-cancel="Cancel"
+                                           data-trans-button-confirm="Delete" data-trans-title="Are you sure?"
+                                           class="btn btn-xs btn-danger text-white mb-1" style="cursor:pointer;"
+                                           onclick="$(this).find('form').submit();">
+                                            <i class="fa fa-trash"
+                                               data-toggle="tooltip"
+                                               data-placement="top" title=""
+                                               data-original-title="Delete"></i>
+                                            <form action="{{route('admin.sliders.destroy',['id'=>$item->id])}}"
+                                                  method="POST" name="delete_item" style="display:none">
+                                                @csrf
+                                                {{method_field('DELETE')}}
+                                            </form>
+                                        </a>
+
+
+
+
+ <a href="{{route('admin.sliders.edit',['id'=>$item->id]) }}"
+                                           class="btn btn-xs btn-info mb-1"><i class="icon-pencil"></i></a>

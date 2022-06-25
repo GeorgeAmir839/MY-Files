@@ -1,0 +1,130 @@
+<<>> = 3rd  , |||| = tool , alignment = mo7azah ,  x = here ,
+========================== Code Flutter Learning George ===================================
+1-column attripute = |||| ===>>> row the same =<<>>
+  - mainAxisSize: MainAxisSize.max,  min=>3la ad ale gwa    =>7gm alcolumn mn alshasha <<>> (3rd)
+  - mainAxisAlignment: MainAxisAlignment.center, start center end |||| row <<>> defoult start
+  - crossAxisAlignment: CrossAxisAlignment.end, start center end <<>> column ||||  defoult center
+--------------------------------------------------------------------------------------
+2-SingleChildScrollView
+ -scrollDirection: Axis.horizontal, defoult vertical
+--------------------------------------------------------------------------------------
+3-Expanded يتيح ليك تروح لحد الاخر لو كلام كتير مثلا هتديلو عدد معين و تعمل النقط بس بردو هيجيب خطا اكسبنديد بيحلو
+ - wrab container to divide screan on count of Expanded || if there anther thing like container Expanded take all screan except container 
+--------------------------------------------------------------------------------------
+4-Image(image: NetworkImage('',),), attripute=>  width: double.infinity, hight 
+fit: BoxFit.cover, values contain fill fillhight fillWiidth none scaleDown try
+--------------------------------------------------------------------------------------
+5-Container (child:) 
+ -attripute==>color width hight  take all attripute
+ -padding: EdgeInsetsDirectional.only(),
+--------------------------------------------------------------------------------------
+6-stack (children:[]) بيحط الحاجة علي بعض طبقات
+ -attripute==>color width hight
+--------------------------------------------------------------------------------------
+7-list ==>put data in F||DB 
+ ?'separated' => lw feh msafa = SizedBox : 'builder' => lw mfesh msafa 'separatorBuilder'=>bttl8y
+ListView.separated(physics:NeverScrollableScrollPhysics(),
+shrinkWrap: true,itemBuilder: (context,index)=>buildChatItem(),
+separatorBuilder: (context, index) => SizedBox(width: 20,),itemCount: 7,),),
+-
+'physics:NeverScrollableScrollPhysics(),' => bmn3 anha mt scrolle4 34anm lw h5le al4a4a kolha tescroll
+refrance code => project flutter_aplication_1 massenger_list.dart
+'scrollDirection: Axis.horizontal' => scroll bs m4 goz2 mn al4a4a
+child: ListView.separated(shrinkWrap: true,scrollDirection: Axis.horizontal,
+itemBuilder: (context, index) => buildOnlineItem(),
+separatorBuilder: (context, index) => SizedBox(width: 20,),itemCount: 7,),),
+-
+build item =>data
+build list =>ale b3rd feha aldata in flutter = ListView.separated
+add item to list =>
+--------------------------------------------------------------------------------------
+8--stateful && stateless 
+الفرق مابينهم ان ليس بتعرض شاشة واحدة ثابتة يعني لو انا حاطط عداد بيزود رقم مينفعش لانها مش بيتعملها ريبيلد فبستخدم الفل بيتعملعا ريبلد 
+اولا براب الليس ب فل وبعدين لازم اروح استدعي 
+1-initstate => @overridevoid initState() {// TODO: implement initStatesuper.initState(); }
+2-rebuild to screen =>setState(() {count--;print(count);}); هنا انا بقولو انت هتعمل ريبلد في الحتة دية الي هي انقص العداد دلوقتي
+// state less contain one class provide widget
+// state ful contain  classes
+// 1. first class provide widget
+// 2. second class provide state from this widget
+--------------------------------------------------------------------------------------
+-stack(children:[]) ==>take children not child all under
+(column,row,
+alignment: AlignmentDirectional.bottomEnd,  =>مكان الحاجة في ال stack
+-widget(child:) ==>take child
+(Container
+(text,center,
+widget ==> ale feha kol 7aga blnsba ll text container 2==> b3ml 7aga asmha
+awrab widget a5leha chiled mn wigdget tane feha al5was ale ana 3yzha
+
+========================== widget.important ===================================
+-Text('Create video call',maxLines: 2,textAlign: TextAlign.center,overflow: TextOverflow.ellipsis,
+style: TextStyle(color: Colors.white,fontSize: 18.0,),),
+                          ******* TextFormField (INPUT) *******
+var emailController=TextEditingController();
+
+-TextFormField: onChanged: (value){print(value);}, || onFieldSubmitted: (value){print(value);},
+ keyboardType: TextInputType.emailAddress, decoration:obscureText: true, defoult false
+-Exanple
+TextFormField(controller: passwordController,\obscureText: true,\keyboardType: TextInputType.visiblePassword,
+// style: TextStyle(color: Colors.blue,),onFieldSubmitted: (value){print(value);},
+onChanged: (value){print(value);},decoration: InputDecoration(// fillColor: Colors.blue,
+prefixIcon: Icon(Icons.lock,),suffixIcon: Icon(Icons.remove_red_eye,),
+ labelText: 'Password',border: OutlineInputBorder(),),),
+                                   ******* Button *******
+-MaterialButton(onPressed: () {},height: 50.0,child: Text('CALCULATE',style: TextStyle(color: Colors.white,),),),
+-TextButton(onPressed: (){},child: Text('Create New Account'),),
+-IconButton(onPressed: () {print('Home-22');},icon: CircleAvatar(radius: 30,backgroundColor: Colors.white24,
+ child: const Icon(Icons.camera_alt,size: 23,color: Colors.white,),),),
+- FloatingActionButton(onPressed: () {}, mini: true,child: Icon(Icons.remove,),),
+                                         ***************
+-CircleAvatar(radius: 32,backgroundColor: Colors.white24,child: IconButton(onPressed: () {print('Home-22');},
+ icon:const Icon(Icons.video_call,size: 30,color: Colors.white,),),),
+                                        ***************
+-SizedBox( width: 20,),
+-Image(image: AssetImage('assets/images/download.jpg'),height: 90,width: 90,), => or NetworkImage if image from net
+-Slider(value: 120.0,max: 220.0,min: 80.0,onChanged: (value) {print(value.round());},),
+                             *******GestureDetector ينفع ادوس عليها********
+==>TO MAAKE container or wedgit clickable ينفع ادوس عليها
+-GestureDetector(onTap: (){setState(() {colortype=Colors.blue;});},),
+                                        *******Navigator********
+==>to move from screen to anther with data للتنقل من اسكرين لاخري و pop للرجوع بدل push
+-Navigator.push(context,MaterialPageRoute(builder: (context) => BMIResultScreen(age: age,isMale: isMale,result: result.round(),),),);
+                                        *******FOOOOORM*******
+==>put it if ther TextFormField to make validation
+-Form(key:formKey,),
+1-var formKey = GlobalKey<FormState>();  //put it as prameter top op padge
+2-validator: (value){if(value!.isEmpty){return 'email must not be empty';}return null;}, ////put in widgt TextFormField(after keyboardType)
+3-if(formKey.currentState!.validate()){الي هيحصل لما يدوز زرار الفورم actin when user click on form bottun}
+========================== attripute.attripute ===================================
+-color: Colors.indigoAccent.withOpacity(1),
+-padding:const EdgeInsetsDirectional.only(), EdgeInsets EdgeInsets.only()
+  EdgeInsets.symmetric(vertical: 10)   الناحيتين قد بعض فوق و تحت horezontal يمين و شمال 
+  EdgeInsets.all(),
+-padding: EdgeInsets.all(16.0), container
+-clipBehavior: Clip.antiAliasWithSaveLayer, .only      =>to show clip inside stack or whit ever
+-style:TextStyle(fontsize.wight,color
+-porder:OutlineInputBorder()
+-decoration:BoxDecoration(borderRadius: BorderRadius.circular(20)),
+ BorderRadiusDirectional.only(topStart: Radius.circular(50),),
+ hintText:'text'بيتمسح اول ما ادوس      lapelText:'text'بيتلون بالديفولت ويظهر فوق
+ InputDecoration(prefixIcon: Icon(Icons.email,),), - suffixIcon: Icon(Icons.remove_red_eye,),
+
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+========================== inphormation ===================================
+-const =>run in runtime or compile time app know it before user open app
+-Anonymous Function =>Function without name like (if there prameter){body}
+-arow function return single data FunctionName()=>SingleData if more this FunctionName(){Multiple Data}
+
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+gata auth service provider 2 
+$this->registerPolicies();
+        Gate::define('asadmin',function($user){
+            return $user->role == 'admin';
+            //vypodalyho@mailinator.
+        });
+        Gate::define('asuser',function($user){
+            return $user->role == 'user';
+        });
+        $this->registerPolicies();
+        Gate::define('assuperadmin',function($user){
+            return $user->role == 'superadmin';
+            //vypodalyho@mailinator.
+        });
+        Gate::define('asgest',function($user){
+            return $user->role == 'gest';
+        });
+//////////////////////////////////////////////////////////
+https://www.etharshrouf.com/ar/article/56/%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84-%D9%85%D8%B9-api-%D9%81%D9%8A-%D9%84%D8%A7%D8%B1%D8%A7%D9%81%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%B2%D8%A1-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%AA%D8%B3%D8%AC%D9%8A%D9%84-%D8%A7%D9%84%D8%AF%D8%AE%D9%88%D9%84-%D9%88%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-route-%D8%A8%D8%A5%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-laravel-sanctum.
+
+
+بعدين اروح احط دة في ال kernal  ال في http سطر6
+use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+ ///////////////////////////////////////////////////////
+
+
+ahmed emam auth vidio 7 4r7 al auth

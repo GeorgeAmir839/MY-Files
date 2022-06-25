@@ -1,0 +1,100 @@
+php artisan optimize:clear   php artisan route:clear   php artisan config:clear  php artisan view:clear  php artisan cache:clear  php artisan route:list 
+========================== Code Mora Soft ===================================
+composer create-project --prefer-dist laravel/laravel Hospital      ====> morasoft
+composer create-project --prefer-dist laravel/laravel 7 project      ====> morasoft
+composer create-project laravel/laravel asmproject   =====> me
+laravel new hospitals 
+تحميل نسخة لارفيل عن طريق الكمبوزر
+to create laravel 8 project
+composer create-project --prefer-dist laravel/laravel:8.6.11 blog
+
+1- make auth system 2 methods    before --> install nodejs 1- simple suth system
+     1- composer require laravel/ui
+     2- php artisan ui bootstrap --auth  || php artisan ui vue --auth
+     3- npm install 4- npm run dev
+       
+2- jetstream auth system
+       1- composer require laravel/jetstream 2- laravel new BlogAuth --jet 3- npm install 4- npm run dev
+
+========================== Migration ===================================
+How can I run specific migration in laravel [duplicate]
+php artisan migrate --path=/database/migrations/2022_06_15_201845_add_columns_to_users_table.php
+0-php artisan make:migration create_doctors_table
+-php artisan make:migration add_columns_to_users_table
+- run the maigration   ==> php artisan migrate
+- check the migration ==> php artisan migrate:status
+- php artisan migrate:fresh
+- php artisan migrate:rollback
+
+php artisan make:seeder CreateAdminUserSeeder     ==>To Create db seed 
+php artisan db:seed --class=CreateAdminUserSeeder    ==>To Run db seed 
+========================== Model ===================================
+0-To Make Model olnly --> php artisan make:model Post -m  
+
+========================== Controller ===================================
+0-php artisan make:controller PhotoController 
+  -php artisan make:controller PhotoController -r          =>R
+           ****===>**** Route::resource("doctor", DoctorController::class)****<===**** 
+                        *******API*******
+0-php artisan make:controller API/PhotoController 
+  -php artisan make:controller API/PhotoController --api         =>R API =>Without F Create For Exemble
+  -php artisan make:controller api/ProductController --api --model=Product
+========================== Model Controller Migration ===================================
+-php artisan make:model Doctor -m                      M=>MI
+-php artisan make:controller DoctorController -m Doctor                 C=>M
+-php artisan make:controller DoctorController -m Doctor -r                C=>M=>R
+****===>**** php artisan make:model Post -mc                              M=>C=>MI
+****===>**** php artisan make:model Post -mcr                              M=>C=>MI=>R
+========================== Collection ===================================
+Tosend data as a collection in API 
+-php artisan make:resource UserCollection         //extends ResourceCollection
+  = php artisan make:resource User --collection     = ale fo2 w ale fo2 afdel as stander        //extends ResourceCollection
+-php artisan make:resource UserResource  //extends JsonResource
+           ****===>****!!!!!!!! 8er m3rof alfra abenhom wla alafdel re api !!!!!!!!****<===**** 
+//extends ResourceCollection ????   //extends JsonResource ????
+
+========================== Tenkir ===================================
+1-php artisan tinker //to create face data in laravel 
+2-DB::table('users')->insert(['name'=>'Code With Dary','email'=>'info@darynazer.com','password'=>Hash::make('dary1234')]) //to shoce taple and insert data
+3-exit;
+========================== Notification ===================================
+           ****===>****!!!!!!!! 8er m3rof!!!!!!!!****<===**** 
+-php artisan notifications:table
+-php artisan make:notification InvoicePaid
+========================== To Run Local Server ===================================
+type ipconfig inside cmd
+get IPV4 address
+php artisan serve --host=IPV4 address
+send the url to flutter
+--------------------------------------------------------------------------------------
+For make validation for create update but result validation
+-php artisan make:request CreatesubscribRequest
+--------------------------------------------------------------------------------------
+               ****===>**** Speeeeeeeeedooooo Command****<===**** 
+if i need to make new table in case used pahage reposetry u can used this commind
+php artisan infyom:api_scaffold (Post)=(name of taple) 
+//this will make to u model veiw controller reposetre request maigrate api lang
+//php artisan make:migration add_country_id_column_to_business_settings_table
+ php artisan make:migration remove_foreign_payment_id_and_payment_id_column_to_bookings_table
+--------------------------------------------------------------------------------------
+-php artisan route:list
+-php artisan make:model Product -mcrf //f for face data
+
+
+if i need to add session after any action like delete 
+in function of delete ---> return back()->with(//1=name of session to call bach him in front'success','yourmassage')
+to display tish massege ---> @if (session()->has(1'success'))  <div class="alert alert-success"> {{session()->flash('success')}}</div> @endif
+// firebase testing number    01111644420    code =  123456
+//Log::debug($request->all()); to debug my code in storage/logs/laravel.log
+--------------------------------------------------------------------------------------
+
+
+
+https://www.tutsmake.com/laravel-8-factory-generate-dummy-data-tutorial/
+https://www.section.io/engineering-education/laravel-passport/
+
+https://spatie.be/docs/laravel-permission/v5/basic-usage/role-permissions==
+==https://web-tuts.com/laravel-8-user-roles-and-permissions/
+
+$(el).prev().val()
+https://stackoverflow.com/questions/574904/get-next-previous-element-using-javascript

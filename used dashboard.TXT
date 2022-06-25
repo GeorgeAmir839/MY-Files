@@ -1,0 +1,5 @@
+1-take all filles in views put it in view (in my project == P)
+2-open wep.php take route admin controller put it in the end line in page wep.php (P)
+3-take asset from public put it (p)
+4-admin controller (P)
+=>have 1-icon 2-ecommerce 3-multiple table 4-multiple model js

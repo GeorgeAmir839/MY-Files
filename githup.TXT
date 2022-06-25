@@ -1,0 +1,35 @@
+========================== Code Githup George ===================================
+1-working ara to staging area 
+git branch  
+git status    //show status of git branch
+git add file name || . //to upload all
+git reset HEAD file name
+--------------------------------------------------------------------------------------
+2-staging area to local repo
+git commit -m "any massge"
+--------------------------------------------------------------------------------------
+3-local repo to remot rebo
+git push origin master
+--------------------------------------------------------------------------------------
+              =======>to upload project laravel from git<========
+git clone (link rebo)   
+composer install -> npm install -> edit file (.env.exampel to .env) -> php artisan key:generate
+-> create or import database -> php artisan db:seed  
+--------------------------------------------------------------------------------------
+git pull origin //to git update from origin rebo make 1-git fetch && 2-git merge
+git reset --soft hash commit from git log 
+git reset --hard <commit_before_merge>
+git cherry-pick (spacifec hash commit)  //to upload spasifec commit from pranch to anthergit 
+git cherry-pick -n hashcommit //to git commit in stage
+--------------------------------------------------------------------------------------
+// remove file from database
+git rm file1.txt
+git commit -m "remove file1.txt"
+--------------------------------------------------------------------------------------
+              =======>to merge from pranche to anther pranch<========
+git branch fix-readme 
+git add file name || . ==>from current branch & git commit -m "messege" & git push origin branchname
+git checkout merge.branch.name.old
+git merge merge.branch.name.new  &  git push origin branchname
+
+

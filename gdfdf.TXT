@@ -1,0 +1,32 @@
+// $data = [
+        //     'user_id'           => $teacher->id,
+        //     'facebook_link'     => request()->facebook_link,
+        //     'twitter_link'      => request()->twitter_link,
+        //     'linkedin_link'     => request()->linkedin_link,
+        //     'payment_method'    => request()->payment_method,
+        //     'payment_details'   => json_encode($payment_details),
+        //     'description'       => request()->description,
+        //     'description_ar'       => request()->description_ar,
+        //     'jop_title'       => request()->jop_title,
+
+        // ];
+        // dd($data);
+        // User::create($request->all());
+        $teacher_profile = new TeacherProfile;
+        $teacher_profile->user_id           = $teacher->id;
+        
+
+        $teacher_profile->facebook_link     = $request->facebook_link;
+        $teacher_profile->twitter_link      = $request->twitter_link;
+        $teacher_profile->linkedin_link     = $request->linkedin_link;
+        $teacher_profile->payment_method    = $request->payment_method;
+        
+        $teacher_profile->payment_details   = json_encode($payment_details);
+        // dd($teacher_profile,$payment_details);
+        $teacher_profile->description       = $request->description;
+        $teacher_profile->description_ar       = $request->description_ar;
+        // $teacher_profile->jop_title       = $request->jop_title;
+        // dd($teacher_profile,$payment_details);
+        $teacher_profile->save();
+        // $teache_rofile=TeacherProfile::create($data);
+        // dd('done22', $teacher_profile);
