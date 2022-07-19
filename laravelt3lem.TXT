@@ -1,0 +1,1 @@
+@$data["bllsdsadsa"]   ==> @ => skip error and make it null .

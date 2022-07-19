@@ -1,9 +1,17 @@
 https://e-training.ivorytraining.com/
+https://demo.ivorytraining.com/user/auth/user/create
+
 exahost
 mahmoud.alsaleh@ivorytraining.com
 Password: DFjfn%rs#4
 To login, visit https://my.exahost.com/
  
+
+ create mode 100644 database/migrations/2022_06_27_200607_create_course_location_form_question_rate_checkds_table.php
+ create mode 100644 database/migrations/2022_07_04_092043_add_more_fields_to_users.php
+ create mode 100644 database/migrations/2022_07_04_104526_create_activity_log_table.php
+ create mode 100644 database/migrations/2022_07_06_191742_add_number_of_questions_to_forms_table.php
+
 
 Username: developer.php@ivorytraining.com
 Password: develop2021
@@ -30,6 +38,10 @@ Ad2022
 student
 hhhh2022@gmail.com
 St2022
+
+dkhalf37@gmail.com
+12345678
+
 
 ham2020@gmail.com
 123456
@@ -58,7 +70,7 @@ merge request
 
 
 
-
+{{ route('admin.dashboard') }}
 
 
 <div class="col-12  text-left form-group">
